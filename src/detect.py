@@ -8,21 +8,10 @@ import serial
 import matplotlib.pyplot as plt
 from geometry_msgs.msg import Pose2D
 
-# URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
-URL = "http://192.168.0.20:4747/video?640x480"
-
-# noeud ROS
-rclpy.init()
-node = Node('detect')
-pub = node.create_publisher(Pose2D, 'position_arUco_plan', 10)
-node.create_subscription(String, 'position_arUco_img')
-
-
-
-# ser = serial.Serial("COM11", 115200)   # adapter le port
 cX = 640/2
 cY = 480/2
 Yuco0 = 0
+
 
 def envoyer(vg, vd):
     vg = int(np.clip(vg, -100, 100))
@@ -79,7 +68,7 @@ def orientation_plan(pts):
     dX = P1.X - P0.X
     return np.arctan2(dZ, dX) 
 
-
+"""
 # plot pour afficher dans le plan ---
 plt.ion()
 fig, ax = plt.subplots()
@@ -95,6 +84,7 @@ robot, = ax.plot([], [], "bo", markersize=10)
 xs = [-0.5, 0.5, 0.5, -0.5, -0.5]
 zs = [1.3, 1.3, 2.3, 2.3, 1.3]
 ax.plot(xs, zs, "r-")
+"""
 
 # -------------------------------------
 
@@ -125,33 +115,24 @@ print(y0)
 print(K)
 print(f)
 
-# Détection de marqueurs ArUco avec OpenCV
-dico = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
-params = cv2.aruco.DetectorParameters()
-detector = cv2.aruco.ArucoDetector(dico, params)
+# noeud ROS
 
-cap = cv2.VideoCapture(URL)
-ret, frame = cap.read()
-print(frame.shape)
+class Detect(Node) : 
+    def __init__ (self) : 
+        super().__init__('detect')
+        self.publisher = self.create_publisher(Pose2D, 'position_arUco_plan', 10)
+        self.subscription = self.create_subscription(String, 'position_arUco_img', self.callback, 10)
 
-# cap = cv2.VideoCapture("video_test.mp4") 
-while True :
-    ret, frame = cap.read() 
-    corners, ids, rejected = detector.detectMarkers(frame)
+        
 
-    r1.afficher()
-    r2.afficher()
-    r3.afficher()
-    r4.afficher()
-
-    if ids is not None:
-        cv2.aruco.drawDetectedMarkers(frame, corners, ids)
-        # print(f"corners={corners}")
-        for c, i in zip(corners, ids.flatten()):
-            pts = c.reshape(4, 2)
-            u, v = pts.mean(axis=0)
-        Yuco = v
-        point_Uco = Point_im(Yuco, u)
+    def callback(self, msg) :
+        self.get_logger().info(f"Position reçue : {msg.data}")
+        out = msg.data.split(",")
+        print(f"Position reçue : x1={out[0]}, y1={out[1]}, x2={out[2]}, y2={out[3]}, x3={out[4]}, y3={out[5]}, x4={out[6]}, y4={out[7]}")
+        pts = np.array([[float(out[0]), float(out[1])], [float(out[2]), float(out[3])], [float(out[4]), float(out[5])], [float(out[6]), float(out[7])]])
+        Yuco, Xuco = pts.mean(axis=0)
+       
+        point_Uco = Point_im(Yuco, Xuco)
         robot_plan = point_Uco.imUco_2_plan()
         orientation = orientation_plan(pts)
         print(f"1 : Z = {robot_plan.Z:.2f}, X = {robot_plan.X:.2f}, Orientation = {orientation:.2f} rad = ({np.degrees(orientation):.2f} deg)")
@@ -159,24 +140,37 @@ while True :
         # envoyer(robot_plan.Z*30, robot_plan.X*30)  # envoyer les coordonnées au robot
 
         # mise a jour du plot
-        robot.set_data([robot_plan.X], [robot_plan.Z])
+        # robot.set_data([robot_plan.X], [robot_plan.Z])
 
         # publication des coordonnées sur le topic ROS
         pose_msg = Pose2D()
         pose_msg.x = float(robot_plan.X)
         pose_msg.y = float(robot_plan.Z)
         pose_msg.theta = float(orientation)
-        pub.publish(pose_msg)
+        self.publisher.publish(Pose2D(x=robot_plan.Z, y=robot_plan.X, theta=orientation))
 
 
-    cv2.imshow("Camera", frame)
 
 
-    if (cv2.waitKey(1) & 0xFF == ord("q")):
-        break
 
-    # time.sleep(0.1)
+# ser = serial.Serial("COM11", 115200)   # adapter le port
 
 
-cv2.destroyAllWindows()
+
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = Detect()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+
+
 #ser.close()
