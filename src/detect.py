@@ -8,14 +8,20 @@ import serial
 import matplotlib.pyplot as plt
 from geometry_msgs.msg import Pose2D
 
+# URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
+URL = "http://192.168.0.20:4747/video?640x480"
 
+# noeud ROS
 rclpy.init()
 node = Node('detect')
-pub = node.create_publisher(Pose2D, 'position_plan', 10)
+pub = node.create_publisher(Pose2D, 'position_arUco_plan', 10)
+node.create_subscription(String, 'position_arUco_img')
+
 
 
 # ser = serial.Serial("COM11", 115200)   # adapter le port
-cX = 300
+cX = 640/2
+cY = 480/2
 Yuco0 = 0
 
 def envoyer(vg, vd):
@@ -43,7 +49,7 @@ class Point_plan :
     
     def afficher(self) :
         point_im = self.plan_2_im()
-        cv2.circle(frame, (point_im.xim, point_im.yim), 5, (200, 0, 200), -1)
+        cv2.circle(frame, (point_im.xim, point_im.yim), 10, (0, 255, 0), -1)
         # print(f"Z={self.Z} X={self.X} => x={point_im.xim} y={point_im.yim}")
 
 
@@ -63,6 +69,9 @@ class Point_im :
         X = (self.xim - cX) * (K + K1) / (self.yim - y0) / f
         return Point_plan(Z, X)
 
+# pour avoir l'orientation de l'arUco dan sle plan
+# pts sont les coord de deux points de l'arUco
+# ils sont mis dans le plan puis trigo pour trouver l'orientation
 def orientation_plan(pts):
     P0 = Point_im(pts[0][1], pts[0][0]).imUco_2_plan()
     P1 = Point_im(pts[1][1], pts[1][0]).imUco_2_plan()
@@ -70,6 +79,8 @@ def orientation_plan(pts):
     dX = P1.X - P0.X
     return np.arctan2(dZ, dX) 
 
+
+# plot pour afficher dans le plan ---
 plt.ion()
 fig, ax = plt.subplots()
 ax.set_xlim(-1.5, 1.5)
@@ -85,6 +96,9 @@ xs = [-0.5, 0.5, 0.5, -0.5, -0.5]
 zs = [1.3, 1.3, 2.3, 2.3, 1.3]
 ax.plot(xs, zs, "r-")
 
+# -------------------------------------
+
+# repère dans le plan réel
 r1  = Point_plan (1.3, 0.5)
 r2  = Point_plan (2.3, 0.5)
 r3  = Point_plan (1.3, -0.5)
@@ -93,10 +107,11 @@ r4  = Point_plan (2.3, -0.5)
 ob1 = obstacle (1.8, 1.1)
 ob2 = obstacle (1.5, 0.8)
 
-p_calib1 = Point_im (400, 453)
-p_calib2 = Point_im (300, 386)
-p_calib3 = Point_im (400, 146)
-p_calib4 = Point_im (300, 213)
+# coordonnées des points de repère dans l'image
+p_calib1 = Point_im (cY+100, cX + 300)
+p_calib2 = Point_im (cY-100, cX + 200)
+p_calib3 = Point_im (cY+100, cX - 300)
+p_calib4 = Point_im (cY-100, cX - 200)
 
 A = np.array([[r1.Z, 1], [r2.Z, 1]])
 b = np.array([r1.Z * p_calib1.yim, r2.Z * p_calib2.yim])
@@ -115,8 +130,11 @@ dico = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
 params = cv2.aruco.DetectorParameters()
 detector = cv2.aruco.ArucoDetector(dico, params)
 
-# cap = cv2.VideoCapture(0)
-cap = cv2.VideoCapture("video_test.mp4") 
+cap = cv2.VideoCapture(URL)
+ret, frame = cap.read()
+print(frame.shape)
+
+# cap = cv2.VideoCapture("video_test.mp4") 
 while True :
     ret, frame = cap.read() 
     corners, ids, rejected = detector.detectMarkers(frame)
@@ -157,7 +175,7 @@ while True :
     if (cv2.waitKey(1) & 0xFF == ord("q")):
         break
 
-    time.sleep(0.1)
+    # time.sleep(0.1)
 
 
 cv2.destroyAllWindows()
