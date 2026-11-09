@@ -11,9 +11,6 @@ from geometry_msgs.msg import Pose2D
 # constantes dans l'image
 cX = 1280//2
 cY = 720//2
-Yuco0 = 0
-him0 = -60
-
 
 def envoyer(vg, vd):
     vg = int(np.clip(vg, -100, 100))
@@ -86,24 +83,18 @@ class Detect(Node) :
         f = float(message[2])
         K1 = float(message[3])
         time.sleep(0.1)
-        # self.get_logger().info(f"Calibration reçue : y0={y0}, K={K}, f={f}")
-
+   
     def callback(self, msg) :
+
         self.get_logger().info(f"Position reçue : {msg.data}")
         out = msg.data.split(",")
         #print(f"Position reçue : x1={out[0]}, y1={out[1]}, x2={out[2]}, y2={out[3]}, x3={out[4]}, y3={out[5]}, x4={out[6]}, y4={out[7]}")
         pts = np.array([[float(out[0]), float(out[1])], [float(out[2]), float(out[3])], [float(out[4]), float(out[5])], [float(out[6]), float(out[7])]])
         Xuco, Yuco = pts.mean(axis=0)
         print(f"Coordonnées moyennes de l'arUco : Xuco={Xuco:.2f}, Yuco={Yuco:.2f}")
-        point_Uco = Point_im(Yuco, Xuco)
-        robot_plan = point_Uco.imUco_2_plan()
+        point_Uco = Point_im(Yuco, Xuco) # création du point image avec le centre du l'arUco
+        robot_plan = point_Uco.imUco_2_plan() # Transformation dans le plan
         orientation = orientation_plan(pts)
-        # print(f"1 : Z = {robot_plan.Z:.2f}, X = {robot_plan.X:.2f}, Orientation = {orientation:.2f} rad = ({np.degrees(orientation):.2f} deg)")
-
-        # envoyer(robot_plan.Z*30, robot_plan.X*30)  # envoyer les coordonnées au robot
-
-        # mise a jour du plot
-        # robot.set_data([robot_plan.X], [robot_plan.Z])
 
         # publication des coordonnées sur le topic ROS
         pose_msg = Pose2D()
@@ -112,8 +103,6 @@ class Detect(Node) :
         pose_msg.theta = float(orientation)
         self.publisher.publish(pose_msg)
 
-
-# ser = serial.Serial("COM11", 115200)   # adapter le port
 
 def main(args=None):
     rclpy.init(args=args)
@@ -128,5 +117,3 @@ def main(args=None):
 if __name__ == '__main__':
     main()
 
-
-#ser.close()

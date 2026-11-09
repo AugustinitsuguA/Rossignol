@@ -21,7 +21,7 @@ global y0, K, f, K1
 cX = 1280//2
 cY = 720//2
 Yuco0 = 0
-him0 = -60
+him0 = -60 # taille en px du robot quand il est sur la première ligne
 
 class obstacle : 
     def __init__(self, Z, X, taille = 0) :
@@ -67,36 +67,34 @@ r2  = Point_plan (2.3, 0.5)
 r3  = Point_plan (1.3, -0.5)
 r4  = Point_plan (2.3, -0.5)
 
-r = Point_plan (1.8, 0.5)
+r21  = Point_plan (1.3, 1.5)
+r23  = Point_plan (1.3, -1.5)
+
+r = Point_plan (1.8, 0.5) # point test
 
 ob1 = obstacle (1.8, 1.1)
 ob2 = obstacle (1.5, 0.8)
 
 # coordonnées des points de repère dans l'image
-p_calib1 = Point_im (cY+100, cX + 300)
-print(p_calib1.yim, p_calib1.xim)
-p_calib2 = Point_im (cY-100, cX + 200)
-print(p_calib2.yim, p_calib2.xim)
-p_calib3 = Point_im (cY+100, cX - 300)
-print(p_calib3.yim, p_calib3.xim)
-p_calib4 = Point_im (cY-100, cX - 200)
-print(p_calib4.yim, p_calib4.xim)
+p_calib1 = Point_im (cY+100, cX + 350)
+# print(p_calib1.yim, p_calib1.xim)
+p_calib2 = Point_im (cY-50, cX + 280)
+# print(p_calib2.yim, p_calib2.xim)
+p_calib3 = Point_im (cY+100, cX - 350)
+# print(p_calib3.yim, p_calib3.xim)
+p_calib4 = Point_im (cY-50, cX - 280)
+# print(p_calib4.yim, p_calib4.xim)
 
 A = np.array([[r1.Z, 1], [r2.Z, 1]])
 b = np.array([r1.Z * p_calib1.yim, r2.Z * p_calib2.yim])
 
+# calcul des constantes
 X = np.linalg.solve(A, b)
 y0 = X[0]
 K = X[1]
-f = (p_calib1.xim - p_calib3.xim) * r1.Z / (r1.X - r3.X)
+f = (p_calib1.xim - p_calib3.xim) * r1.Z / (r1.X - r3.X)   
 K1 = him0 * r1.Z
 
-p = Point_im (cY-0, cX-200)
-rp = p.im_2_plan()
-rp2 = p.imUco_2_plan()
-prp = rp.plan_2_im()
-
-print(f"Point réel : Z={rp.Z}, X={rp.X}")
 
 print("---")
 print(y0)
@@ -124,17 +122,18 @@ while True :
     cv2.circle(frame, (r3.plan_2_im().xim, r3.plan_2_im().yim), 10, (0, 255, 0), -1)
     cv2.circle(frame, (r4.plan_2_im().xim, r4.plan_2_im().yim), 10, (0, 255, 0), -1)
 
-    cv2.circle(frame, (r.plan_2_im().xim, r.plan_2_im().yim), 10, (255, 0, 0), -1)
+    cv2.line(frame, (0, int(y0)), (1200, int(y0)), (100, 100, 255), 2)
 
-    cv2.circle(frame, (rp.plan_2_im().xim, rp.plan_2_im().yim), 10, (0, 0, 255), -1)
+    cv2.line(frame, (cX, int(y0)), (int(r1.plan_2_im().xim), int(r1.plan_2_im().yim)), (100, 100, 255), 2)
+    cv2.line(frame, (cX, int(y0)), (int(r3.plan_2_im().xim), int(r3.plan_2_im().yim)), (100, 100, 255), 2)
 
-    cv2.circle(frame, (rp2.plan_2_im().xim, rp2.plan_2_im().yim), 10, (0, 0, 255), -1)
+    cv2.line(frame, (cX, int(y0)), (int(r21.plan_2_im().xim), int(r21.plan_2_im().yim)), (100, 100, 255), 2)
+    cv2.line(frame, (cX, int(y0)), (int(r23.plan_2_im().xim), int(r23.plan_2_im().yim)), (100, 100, 255), 2)
 
     cv2.imshow("Calibration", frame)
     key = cv2.waitKey(1)
     if key == ord('y') or key == ord('Y'):
 
-        
         msg = String()
         msg.data = f"{y0},{K},{f},{K1}"
         node.publisher.publish(msg)
@@ -144,19 +143,3 @@ while True :
 
         
         break
-
-
-"""
-def main(args=None):
-    rclpy.init(args=args)
-    node = Calibration()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
-    node.destroy_node()
-    rclpy.shutdown()
-
-if __name__ == '__main__':
-    main()
-"""

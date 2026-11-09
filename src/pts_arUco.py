@@ -63,6 +63,9 @@ r2  = Point_plan (2.3, 0.5)
 r3  = Point_plan (1.3, -0.5)
 r4  = Point_plan (2.3, -0.5)
 
+r21  = Point_plan (1.3, 1.5)
+r23  = Point_plan (1.3, -1.5)
+
 r = Point_plan (1.8, 0)
 
 # coordonnées des points de repère dans l'image
@@ -107,7 +110,13 @@ class Points_img(Node) :
         cv2.circle(frame, (r3.plan_2_im().xim, r3.plan_2_im().yim), 10, (0, 255, 0), -1)
         cv2.circle(frame, (r4.plan_2_im().xim, r4.plan_2_im().yim), 10, (0, 255, 0), -1)
 
-        cv2.circle(frame, (r.plan_2_im().xim, r.plan_2_im().yim), 10, (255, 0, 0), -1)
+        cv2.line(frame, (0, int(y0)), (1200, int(y0)), (100, 100, 255), 2)
+
+        cv2.line(frame, (cX, int(y0)), (int(r1.plan_2_im().xim), int(r1.plan_2_im().yim)), (100, 100, 255), 2)
+        cv2.line(frame, (cX, int(y0)), (int(r3.plan_2_im().xim), int(r3.plan_2_im().yim)), (100, 100, 255), 2)
+
+        cv2.line(frame, (cX, int(y0)), (int(r21.plan_2_im().xim), int(r21.plan_2_im().yim)), (100, 100, 255), 2)
+        cv2.line(frame, (cX, int(y0)), (int(r23.plan_2_im().xim), int(r23.plan_2_im().yim)), (100, 100, 255), 2)
 
 
         if ids is not None:
