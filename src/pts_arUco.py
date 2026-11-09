@@ -1,5 +1,3 @@
-from detect import Point_plan
-from detect import Point_im
 import rclpy
 import cv2
 import time
@@ -14,18 +12,58 @@ et les reperes de calib, qui sont definis à deux endroits
 cX = 1280//2
 cY = 720//2
 Yuco0 = 0
-him0 = -30
+him0 = -0
 
 # Détection de marqueurs ArUco avec OpenCV
 dico = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
 params = cv2.aruco.DetectorParameters()
 detector = cv2.aruco.ArucoDetector(dico, params)
 
+class obstacle : 
+    def __init__(self, Z, X, taille = 0) :
+        self.Z = Z
+        self.X = X
+        self.taille = taille
+
+class Point_plan :
+    def __init__(self, Z, X) :
+        self.Z = Z
+        self.X = X
+
+    def plan_2_im(self) :
+        x = int(cX + f*self.X/self.Z)
+        y = int((K + self.Z*y0)/self.Z)
+        return Point_im(y, x)    
+    
+    def afficher(self) :
+        point_im = self.plan_2_im()
+        cv2.circle(frame, (point_im.xim, point_im.yim), 10, (0, 255, 0), -1)
+        # print(f"Z={self.Z} X={self.X} => x={point_im.xim} y={point_im.yim}")
+
+
+class Point_im : 
+    def __init__ (self, yim, xim = 0) : 
+        self.yim = yim
+        self.xim = xim
+
+    def im_2_plan(self) :
+        Z = K/(self.yim - y0)
+        X = (self.xim - cX) * Z / f
+        return Point_plan(Z, X)
+
+    def imUco_2_plan(self) :
+        Z = (K + K1) / (self.yim - y0)
+        X = (self.xim - cX) * (K + K1) / (self.yim - y0) / f
+        return Point_plan(Z, X)
+
+
 # repères dans le plan réel
 r1  = Point_plan (1.3, 0.5)
 r2  = Point_plan (2.3, 0.5)
 r3  = Point_plan (1.3, -0.5)
 r4  = Point_plan (2.3, -0.5)
+
+r = Point_plan (1.8, 0)
 
 # coordonnées des points de repère dans l'image
 p_calib1 = Point_im (cY+100, cX + 300)
@@ -34,6 +72,7 @@ p_calib3 = Point_im (cY+100, cX - 300)
 p_calib4 = Point_im (cY-100, cX - 200)
 
 # URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
+# 172.20.10.1:4747
 URL = "http://192.168.0.20:4747/video"
 # noeud ROS
 class Points_img(Node) :
@@ -45,6 +84,12 @@ class Points_img(Node) :
     def calib_cb(self, msg) :
         time.sleep(1)
         print(f"Calibration reçue : {msg.data}")
+        message = msg.data.split(",")
+        global y0, K, f, K1
+        y0 = float(message[0])
+        K = float(message[1])
+        f = float(message[2])
+        K1 = float(message[3])
         self.cap = cv2.VideoCapture(URL)
         timer = 0.01
         self.timer = self.create_timer(timer, self.timer_callback)
@@ -57,10 +102,13 @@ class Points_img(Node) :
             return
         corners, ids, rejected = detector.detectMarkers(frame)
 
-        cv2.circle(frame, (p_calib1.xim, p_calib1.yim), 10, (0, 255, 0), -1)
-        cv2.circle(frame, (p_calib2.xim, p_calib2.yim), 10, (0, 255, 0), -1)
-        cv2.circle(frame, (p_calib3.xim, p_calib3.yim), 10, (0, 255, 0), -1)
-        cv2.circle(frame, (p_calib4.xim, p_calib4.yim), 10, (0, 255, 0), -1)
+        cv2.circle(frame, (r1.plan_2_im().xim, r1.plan_2_im().yim), 10, (0, 255, 0), -1)
+        cv2.circle(frame, (r2.plan_2_im().xim, r2.plan_2_im().yim), 10, (0, 255, 0), -1)
+        cv2.circle(frame, (r3.plan_2_im().xim, r3.plan_2_im().yim), 10, (0, 255, 0), -1)
+        cv2.circle(frame, (r4.plan_2_im().xim, r4.plan_2_im().yim), 10, (0, 255, 0), -1)
+
+        cv2.circle(frame, (r.plan_2_im().xim, r.plan_2_im().yim), 10, (255, 0, 0), -1)
+
 
         if ids is not None:
             cv2.aruco.drawDetectedMarkers(frame, corners, ids)

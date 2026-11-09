@@ -14,13 +14,14 @@ class Calibration(Node) :
 
 
 # URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
-URL = "http://192.168.0.20:4747/video?640x480"
+URL = "http://192.168.0.20:4747/video"
 
 # constantes dans l'image
+global y0, K, f, K1
 cX = 1280//2
 cY = 720//2
 Yuco0 = 0
-him0 = -30
+him0 = -60
 
 class obstacle : 
     def __init__(self, Z, X, taille = 0) :
@@ -59,20 +60,27 @@ class Point_im :
         X = (self.xim - cX) * (K + K1) / (self.yim - y0) / f
         return Point_plan(Z, X)
 
+
 # repères dans le plan réel
 r1  = Point_plan (1.3, 0.5)
 r2  = Point_plan (2.3, 0.5)
 r3  = Point_plan (1.3, -0.5)
 r4  = Point_plan (2.3, -0.5)
 
+r = Point_plan (1.8, 0.5)
+
 ob1 = obstacle (1.8, 1.1)
 ob2 = obstacle (1.5, 0.8)
 
 # coordonnées des points de repère dans l'image
 p_calib1 = Point_im (cY+100, cX + 300)
+print(p_calib1.yim, p_calib1.xim)
 p_calib2 = Point_im (cY-100, cX + 200)
+print(p_calib2.yim, p_calib2.xim)
 p_calib3 = Point_im (cY+100, cX - 300)
+print(p_calib3.yim, p_calib3.xim)
 p_calib4 = Point_im (cY-100, cX - 200)
+print(p_calib4.yim, p_calib4.xim)
 
 A = np.array([[r1.Z, 1], [r2.Z, 1]])
 b = np.array([r1.Z * p_calib1.yim, r2.Z * p_calib2.yim])
@@ -83,9 +91,20 @@ K = X[1]
 f = (p_calib1.xim - p_calib3.xim) * r1.Z / (r1.X - r3.X)
 K1 = him0 * r1.Z
 
+p = Point_im (cY-0, cX-200)
+rp = p.im_2_plan()
+rp2 = p.imUco_2_plan()
+prp = rp.plan_2_im()
+
+print(f"Point réel : Z={rp.Z}, X={rp.X}")
+
+print("---")
 print(y0)
 print(K)
 print(f)
+print(K1)
+
+
 
 # Tant que l'utilisateur n'a pas appuyé sur Y, no affiche l'image avec les points repères.
 # Lorsqu'il appuie sur Y, on envoie les constante y0, K et f sur le topic de calibration. 
@@ -99,18 +118,31 @@ while True :
     if not ret : 
         print("Image non reçue")
         break
-    cv2.circle(frame, (p_calib1.xim, p_calib1.yim), 10, (0, 255, 0), -1)
-    cv2.circle(frame, (p_calib2.xim, p_calib2.yim), 10, (0, 255, 0), -1)
-    cv2.circle(frame, (p_calib3.xim, p_calib3.yim), 10, (0, 255, 0), -1)
-    cv2.circle(frame, (p_calib4.xim, p_calib4.yim), 10, (0, 255, 0), -1)
+    
+    cv2.circle(frame, (r1.plan_2_im().xim, r1.plan_2_im().yim), 10, (0, 255, 0), -1)
+    cv2.circle(frame, (r2.plan_2_im().xim, r2.plan_2_im().yim), 10, (0, 255, 0), -1)
+    cv2.circle(frame, (r3.plan_2_im().xim, r3.plan_2_im().yim), 10, (0, 255, 0), -1)
+    cv2.circle(frame, (r4.plan_2_im().xim, r4.plan_2_im().yim), 10, (0, 255, 0), -1)
+
+    cv2.circle(frame, (r.plan_2_im().xim, r.plan_2_im().yim), 10, (255, 0, 0), -1)
+
+    cv2.circle(frame, (rp.plan_2_im().xim, rp.plan_2_im().yim), 10, (0, 0, 255), -1)
+
+    cv2.circle(frame, (rp2.plan_2_im().xim, rp2.plan_2_im().yim), 10, (0, 0, 255), -1)
+
     cv2.imshow("Calibration", frame)
     key = cv2.waitKey(1)
     if key == ord('y') or key == ord('Y'):
+
         
         msg = String()
         msg.data = f"{y0},{K},{f},{K1}"
         node.publisher.publish(msg)
+        
         print(f"Calibration envoyée : y0={y0}, K={K}, f={f}, K1={K1}")
+        print (frame.shape)
+
+        
         break
 
 
