@@ -72,8 +72,8 @@ class Detect(Node) :
     def __init__ (self) : 
         super().__init__('detect')
         self.publisher = self.create_publisher(Pose2D, 'position_arUco_plan', 10)
-        self.subscription = self.create_subscription(String, 'position_arUco_img', self.callback, 10)
-        self.subscription = self.create_subscription(String, 'calibration', self.calib_cb, 10)
+        self.sub_pos = self.create_subscription(String, 'position_arUco_img', self.callback, 10)
+        self.sub_calib = self.create_subscription(String, 'calibration', self.calib_cb, 10)
         
     def calib_cb(self, msg) :
         message = msg.data.split(",")
