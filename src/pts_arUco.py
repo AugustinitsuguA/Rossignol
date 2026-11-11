@@ -94,11 +94,12 @@ class Points_img(Node) :
         f = float(message[2])
         K1 = float(message[3])
         self.cap = cv2.VideoCapture(URL)
-        timer = 0.01
+        timer = 1/30
         self.timer = self.create_timer(timer, self.timer_callback)
 
     def timer_callback(self) :
-        
+        i = 0
+        i=i+1
         ret, frame = self.cap.read()
         if not ret:
             self.get_logger().warn('Image non reçue')
@@ -128,8 +129,13 @@ class Points_img(Node) :
             msg.data = ",".join([str(p) for p in pts.flatten()])
             self.publisher.publish(msg)
 
-        cv2.imshow("Camera", frame)
-        cv2.waitKey(1)
+        if (i%5 == 0) :
+            i = 0
+            cv2.imshow("Camera", frame)
+            cv2.waitKey(1)
+
+        
+        
 
 def main(args=None):
     rclpy.init(args=args)
