@@ -75,6 +75,7 @@ class Detect(Node) :
         self.sub_pos = self.create_subscription(String, 'position_arUco_img', self.callback, 10)
         self.sub_calib = self.create_subscription(String, 'calibration', self.calib_cb, 10)
         
+        
     def calib_cb(self, msg) :
         message = msg.data.split(",")
         global y0, K, f, K1

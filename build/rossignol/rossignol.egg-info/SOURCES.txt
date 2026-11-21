@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/rossignol/rossignol.egg-info/PKG-INFO
+../../build/rossignol/rossignol.egg-info/SOURCES.txt
+../../build/rossignol/rossignol.egg-info/dependency_links.txt
+../../build/rossignol/rossignol.egg-info/entry_points.txt
+../../build/rossignol/rossignol.egg-info/requires.txt
+../../build/rossignol/rossignol.egg-info/top_level.txt
+../../build/rossignol/rossignol.egg-info/zip-safe
 launch/tous_les_noeuds.launch.py
 resource/rossignol
 rossignol/__init__.py
@@ -9,10 +16,6 @@ rossignol/commande_test.py
 rossignol/detect.py
 rossignol/filtre.py
 rossignol/pts_arUco.py
-rossignol.egg-info/PKG-INFO
-rossignol.egg-info/SOURCES.txt
-rossignol.egg-info/dependency_links.txt
-rossignol.egg-info/entry_points.txt
-rossignol.egg-info/requires.txt
-rossignol.egg-info/top_level.txt
-rossignol.egg-info/zip-safe
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
