@@ -1,0 +1,16 @@
+[0.000000] (-) TimerEvent: {}
+[0.000488] (rossignol) JobQueued: {'identifier': 'rossignol', 'dependencies': OrderedDict()}
+[0.000543] (rossignol) JobStarted: {'identifier': 'rossignol'}
+[0.099886] (-) TimerEvent: {}
+[0.200045] (-) TimerEvent: {}
+[0.300156] (-) TimerEvent: {}
+[0.400331] (-) TimerEvent: {}
+[0.500530] (-) TimerEvent: {}
+[0.600681] (-) TimerEvent: {}
+[0.700808] (-) TimerEvent: {}
+[0.801019] (-) TimerEvent: {}
+[0.901235] (-) TimerEvent: {}
+[0.995908] (rossignol) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 102, in build\n    return await extension.build(additional_hooks=additional_hooks)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 145, in build\n    temp_symlinks = self._symlinks_in_build(args, setup_py_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 299, in _symlinks_in_build\n    raise RuntimeError(\nRuntimeError: The package_dir contains a mapping from \'rossignol\' to \'rossignol\' which is also a key\n'}
+[0.996499] (rossignol) JobEnded: {'identifier': 'rossignol', 'rc': 1}
+[1.001478] (-) TimerEvent: {}
+[1.006609] (-) EventReactorShutdown: {}

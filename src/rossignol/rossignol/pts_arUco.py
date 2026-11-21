@@ -76,7 +76,7 @@ p_calib4 = Point_im (cY-100, cX - 200)
 
 # URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
 # 172.20.10.1:4747
-URL = "http://192.168.0.20:4747/video"
+URL = "http://192.168.0.21:4747/video"
 # noeud ROS
 class Points_img(Node) :
     def __init__ (self) : 
@@ -86,7 +86,7 @@ class Points_img(Node) :
 
     def calib_cb(self, msg) :
         time.sleep(1)
-        print(f"Calibration reçue : {msg.data}")
+        # print(f"Calibration reçue : {msg.data}")
         message = msg.data.split(",")
         global y0, K, f, K1
         y0 = float(message[0])
@@ -128,6 +128,14 @@ class Points_img(Node) :
             msg = String()
             msg.data = ",".join([str(p) for p in pts.flatten()])
             self.publisher.publish(msg)
+
+        else :
+            
+            msg = String()
+            msg.data = "-1,-1,-1,-1,-1,-1,-1,-1"
+            self.publisher.publish(msg)
+
+
 
         if (i%5 == 0) :
             i = 0
