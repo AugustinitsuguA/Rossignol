@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing rossignol.egg-info/PKG-INFO
+writing dependency_links to rossignol.egg-info/dependency_links.txt
+writing entry points to rossignol.egg-info/entry_points.txt
+writing requirements to rossignol.egg-info/requires.txt
+writing top-level names to rossignol.egg-info/top_level.txt
+reading manifest file 'rossignol.egg-info/SOURCES.txt'
+writing manifest file 'rossignol.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol.egg-link (link to .)
+Installing calibration script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+Installing detect script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+Installing filtre script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+Installing points_img script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+
+Installed /home/ahocq/Projet_rossignol/build/rossignol
+running symlink_data

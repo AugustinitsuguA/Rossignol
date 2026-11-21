@@ -63,6 +63,9 @@ r2  = Point_plan (2.3, 0.5)
 r3  = Point_plan (1.3, -0.5)
 r4  = Point_plan (2.3, -0.5)
 
+r21  = Point_plan (1.3, 1.5)
+r23  = Point_plan (1.3, -1.5)
+
 r = Point_plan (1.8, 0)
 
 # coordonnées des points de repère dans l'image
@@ -73,7 +76,7 @@ p_calib4 = Point_im (cY-100, cX - 200)
 
 # URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
 # 172.20.10.1:4747
-URL = "http://192.168.0.20:4747/video"
+URL = "http://192.168.0.21:4747/video"
 # noeud ROS
 class Points_img(Node) :
     def __init__ (self) : 
@@ -83,7 +86,7 @@ class Points_img(Node) :
 
     def calib_cb(self, msg) :
         time.sleep(1)
-        print(f"Calibration reçue : {msg.data}")
+        # print(f"Calibration reçue : {msg.data}")
         message = msg.data.split(",")
         global y0, K, f, K1
         y0 = float(message[0])
@@ -91,11 +94,12 @@ class Points_img(Node) :
         f = float(message[2])
         K1 = float(message[3])
         self.cap = cv2.VideoCapture(URL)
-        timer = 0.01
+        timer = 1/30
         self.timer = self.create_timer(timer, self.timer_callback)
 
     def timer_callback(self) :
-        
+        i = 0
+        i=i+1
         ret, frame = self.cap.read()
         if not ret:
             self.get_logger().warn('Image non reçue')
@@ -107,7 +111,13 @@ class Points_img(Node) :
         cv2.circle(frame, (r3.plan_2_im().xim, r3.plan_2_im().yim), 10, (0, 255, 0), -1)
         cv2.circle(frame, (r4.plan_2_im().xim, r4.plan_2_im().yim), 10, (0, 255, 0), -1)
 
-        cv2.circle(frame, (r.plan_2_im().xim, r.plan_2_im().yim), 10, (255, 0, 0), -1)
+        cv2.line(frame, (0, int(y0)), (1200, int(y0)), (100, 100, 255), 2)
+
+        cv2.line(frame, (cX, int(y0)), (int(r1.plan_2_im().xim), int(r1.plan_2_im().yim)), (100, 100, 255), 2)
+        cv2.line(frame, (cX, int(y0)), (int(r3.plan_2_im().xim), int(r3.plan_2_im().yim)), (100, 100, 255), 2)
+
+        cv2.line(frame, (cX, int(y0)), (int(r21.plan_2_im().xim), int(r21.plan_2_im().yim)), (100, 100, 255), 2)
+        cv2.line(frame, (cX, int(y0)), (int(r23.plan_2_im().xim), int(r23.plan_2_im().yim)), (100, 100, 255), 2)
 
 
         if ids is not None:
@@ -119,8 +129,21 @@ class Points_img(Node) :
             msg.data = ",".join([str(p) for p in pts.flatten()])
             self.publisher.publish(msg)
 
-        cv2.imshow("Camera", frame)
-        cv2.waitKey(1)
+        else :
+            
+            msg = String()
+            msg.data = "-1,-1,-1,-1,-1,-1,-1,-1"
+            self.publisher.publish(msg)
+
+
+
+        if (i%5 == 0) :
+            i = 0
+            cv2.imshow("Camera", frame)
+            cv2.waitKey(1)
+
+        
+        
 
 def main(args=None):
     rclpy.init(args=args)

@@ -1,0 +1,29 @@
+[0.928s] Invoking command in '/home/ahocq/Projet_rossignol/build/rossignol': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ahocq/Projet_rossignol/build/rossignol/build --no-deps symlink_data
+[1.165s] running develop
+[1.287s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[1.287s]   self.local_index = Environment(self.shadow_path + sys.path)
+[1.309s] running egg_info
+[1.309s] creating rossignol.egg-info
+[1.323s] writing rossignol.egg-info/PKG-INFO
+[1.323s] writing dependency_links to rossignol.egg-info/dependency_links.txt
+[1.323s] writing entry points to rossignol.egg-info/entry_points.txt
+[1.323s] writing requirements to rossignol.egg-info/requires.txt
+[1.323s] writing top-level names to rossignol.egg-info/top_level.txt
+[1.323s] writing manifest file 'rossignol.egg-info/SOURCES.txt'
+[1.352s] reading manifest file 'rossignol.egg-info/SOURCES.txt'
+[1.352s] writing manifest file 'rossignol.egg-info/SOURCES.txt'
+[1.367s] running build_ext
+[1.368s] Creating /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol.egg-link (link to .)
+[1.368s] Installing calibration script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.368s] Installing detect script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.368s] Installing filtre script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.369s] Installing points_img script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.369s] 
+[1.369s] Installed /home/ahocq/Projet_rossignol/build/rossignol
+[1.369s] running symlink_data
+[1.369s] creating /home/ahocq/Projet_rossignol/install/rossignol/share/ament_index
+[1.369s] creating /home/ahocq/Projet_rossignol/install/rossignol/share/ament_index/resource_index
+[1.369s] creating /home/ahocq/Projet_rossignol/install/rossignol/share/ament_index/resource_index/packages
+[1.369s] symbolically linking /home/ahocq/Projet_rossignol/build/rossignol/resource/rossignol -> /home/ahocq/Projet_rossignol/install/rossignol/share/ament_index/resource_index/packages
+[1.370s] symbolically linking /home/ahocq/Projet_rossignol/build/rossignol/package.xml -> /home/ahocq/Projet_rossignol/install/rossignol/share/rossignol
+[1.396s] Invoked command in '/home/ahocq/Projet_rossignol/build/rossignol' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ahocq/Projet_rossignol/build/rossignol/build --no-deps symlink_data

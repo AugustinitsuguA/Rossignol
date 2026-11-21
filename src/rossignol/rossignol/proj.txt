@@ -1,0 +1,4 @@
+# a faire
+faire un noeud qui s'occupe que de l'affichage. 
+afficher l'image, la position via caméra, via commande et filtrée. 
+Faire filtre de kalman, essyer de le tester en simulant des commandes, des position caméra et afficher les résultats.
