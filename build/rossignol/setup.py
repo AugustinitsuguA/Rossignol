@@ -1,1 +1,0 @@
-/home/ahocq/Projet_rossignol/src/rossignol/setup.py

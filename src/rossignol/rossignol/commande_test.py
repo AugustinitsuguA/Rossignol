@@ -7,18 +7,28 @@ class Commande_test (Node) :
     def __init__ (self) :
         super().__init__('commande_test')
         self.publisher = self.create_publisher(String, 'commande_roue', 10)
-        self.timer = self.create_timer(0.05, self.timer_callback)
+        
+        self.sub_calib = self.create_subscription(String, 'calibration', self.calib_cb, 10)
 
     def timer_callback(self) :
         msg = String()
         msg.data = "0.01,0.01"
         self.publisher.publish(msg)
 
+    def calib_cb(self, msg) :
+        self.timer = self.create_timer(0.05, self.timer_callback)
+
 
 def main():
     rclpy.init()
-    rclpy.spin(Commande_test())
-    rclpy.shutdown()
+    node = Commande_test()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.try_shutdown()
 
 
 if __name__ == '__main__':

@@ -3,10 +3,23 @@ import cv2
 import time
 from rclpy.node import Node
 from std_msgs.msg import String
+from geometry_msgs.msg import Pose2D
+from rossignol.calibration import profon1, profon2, largeur
+
+global x_filtre_im
+global y_filtre_im
+
+x_filtre_im = None
+y_filtre_im = None
+
+global i
+i = 0
 
 """
 a faire : faire en sorte de changer les constante à un seul endroit dans calibration
 et les reperes de calib, qui sont definis à deux endroits
+
+centraliser les constantes et les class communes
 """
 # constantes dans l'image
 cX = 1280//2
@@ -83,7 +96,15 @@ class Points_img(Node) :
         super().__init__('points_img')
         self.publisher = self.create_publisher(String, 'position_arUco_img', 10)
         self.subscription = self.create_subscription(String, 'calibration', self.calib_cb, 10)
+        self.sub_filtre = self.create_subscription(Pose2D, 'position_filtree', self.get_filtre, 10)
 
+    def get_filtre(self, msg) :
+        global x_filtre_im, y_filtre_im
+        point_im_filtre = Point_plan(msg.y, msg.x).plan_2_im()
+        x_filtre_im = point_im_filtre.xim
+        y_filtre_im = point_im_filtre.yim
+
+        
     def calib_cb(self, msg) :
         time.sleep(1)
         # print(f"Calibration reçue : {msg.data}")
@@ -98,7 +119,7 @@ class Points_img(Node) :
         self.timer = self.create_timer(timer, self.timer_callback)
 
     def timer_callback(self) :
-        i = 0
+        global i
         i=i+1
         ret, frame = self.cap.read()
         if not ret:
@@ -110,6 +131,8 @@ class Points_img(Node) :
         cv2.circle(frame, (r2.plan_2_im().xim, r2.plan_2_im().yim), 10, (0, 255, 0), -1)
         cv2.circle(frame, (r3.plan_2_im().xim, r3.plan_2_im().yim), 10, (0, 255, 0), -1)
         cv2.circle(frame, (r4.plan_2_im().xim, r4.plan_2_im().yim), 10, (0, 255, 0), -1)
+
+        cv2.circle(frame, (x_filtre_im, y_filtre_im), 10, (0, 255, 0), -1)
 
         cv2.line(frame, (0, int(y0)), (1200, int(y0)), (100, 100, 255), 2)
 
@@ -152,8 +175,9 @@ def main(args=None):
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
-    node.destroy_node()
-    rclpy.shutdown()
+    finally:
+        node.destroy_node()
+        rclpy.try_shutdown()
 
 
 if __name__ == '__main__':

@@ -1,0 +1,56 @@
+[0.993s] Invoking command in '/home/ahocq/Projet_rossignol/build/rossignol': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ahocq/Projet_rossignol/build/rossignol/build
+[1.212s] running develop
+[1.338s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[1.338s]   self.local_index = Environment(self.shadow_path + sys.path)
+[1.364s] Removing /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol.egg-link (link to .)
+[1.394s] Invoked command in '/home/ahocq/Projet_rossignol/build/rossignol' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ahocq/Projet_rossignol/build/rossignol/build
+[1.395s] Invoking command in '/home/ahocq/Projet_rossignol/src/rossignol': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rossignol build --build-base /home/ahocq/Projet_rossignol/build/rossignol/build install --record /home/ahocq/Projet_rossignol/build/rossignol/install.log --single-version-externally-managed install_data --force
+[1.594s] running egg_info
+[1.605s] writing ../../build/rossignol/rossignol.egg-info/PKG-INFO
+[1.605s] writing dependency_links to ../../build/rossignol/rossignol.egg-info/dependency_links.txt
+[1.606s] writing entry points to ../../build/rossignol/rossignol.egg-info/entry_points.txt
+[1.606s] writing requirements to ../../build/rossignol/rossignol.egg-info/requires.txt
+[1.606s] writing top-level names to ../../build/rossignol/rossignol.egg-info/top_level.txt
+[1.631s] reading manifest file '../../build/rossignol/rossignol.egg-info/SOURCES.txt'
+[1.632s] writing manifest file '../../build/rossignol/rossignol.egg-info/SOURCES.txt'
+[1.632s] running build
+[1.632s] running build_py
+[1.632s] creating /home/ahocq/Projet_rossignol/build/rossignol/build
+[1.633s] creating /home/ahocq/Projet_rossignol/build/rossignol/build/lib
+[1.633s] creating /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[1.633s] copying rossignol/pts_arUco.py -> /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[1.634s] copying rossignol/calibration.py -> /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[1.634s] copying rossignol/__init__.py -> /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[1.634s] copying rossignol/detect.py -> /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[1.635s] copying rossignol/filtre.py -> /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[1.636s] copying rossignol/commande_test.py -> /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[1.636s] running install
+[1.640s] running install_lib
+[1.653s] creating /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[1.653s] copying /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol/pts_arUco.py -> /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[1.653s] copying /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol/calibration.py -> /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[1.653s] copying /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol/__init__.py -> /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[1.653s] copying /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol/detect.py -> /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[1.653s] copying /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol/filtre.py -> /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[1.653s] copying /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol/commande_test.py -> /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[1.654s] byte-compiling /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/pts_arUco.py to pts_arUco.cpython-312.pyc
+[1.655s] byte-compiling /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/calibration.py to calibration.cpython-312.pyc
+[1.657s] byte-compiling /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__init__.py to __init__.cpython-312.pyc
+[1.657s] byte-compiling /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/detect.py to detect.cpython-312.pyc
+[1.658s] byte-compiling /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/filtre.py to filtre.cpython-312.pyc
+[1.658s] byte-compiling /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/commande_test.py to commande_test.cpython-312.pyc
+[1.658s] running install_data
+[1.659s] copying resource/rossignol -> /home/ahocq/Projet_rossignol/install/rossignol/share/ament_index/resource_index/packages
+[1.659s] copying package.xml -> /home/ahocq/Projet_rossignol/install/rossignol/share/rossignol
+[1.660s] copying launch/tous_les_noeuds.launch.py -> /home/ahocq/Projet_rossignol/install/rossignol/share/rossignol/launch
+[1.661s] running install_egg_info
+[1.674s] Copying ../../build/rossignol/rossignol.egg-info to /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol-0.0.0-py3.12.egg-info
+[1.675s] running install_scripts
+[1.763s] Installing affichage script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.763s] Installing calibration script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.766s] Installing commande_test script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.766s] Installing detect script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.767s] Installing filtre script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.767s] Installing points_img script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.767s] writing list of installed files to '/home/ahocq/Projet_rossignol/build/rossignol/install.log'
+[1.788s] Invoked command in '/home/ahocq/Projet_rossignol/src/rossignol' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rossignol build --build-base /home/ahocq/Projet_rossignol/build/rossignol/build install --record /home/ahocq/Projet_rossignol/build/rossignol/install.log --single-version-externally-managed install_data --force

@@ -31,6 +31,7 @@ setup(
             'filtre = rossignol.filtre:main',
             'calibration = rossignol.calibration:main',
             'commande_test = rossignol.commande_test:main',
+            'record = rossignol.record:main',
         ],
     },
 )
