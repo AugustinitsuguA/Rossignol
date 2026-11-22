@@ -21,8 +21,14 @@ class Commande_test (Node) :
 
 def main():
     rclpy.init()
-    rclpy.spin(Commande_test())
-    rclpy.shutdown()
+    node = Commande_test()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.try_shutdown()
 
 
 if __name__ == '__main__':

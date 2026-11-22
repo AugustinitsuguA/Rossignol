@@ -26,6 +26,11 @@ def generate_launch_description():
         ),
         Node(
             package='rossignol',
+            executable='record',
+            output='screen',
+        ),
+        Node(
+            package='rossignol',
             executable='calibration',
             output='screen',
         ),

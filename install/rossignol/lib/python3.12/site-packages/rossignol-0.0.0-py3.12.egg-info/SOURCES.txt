@@ -16,6 +16,7 @@ rossignol/commande_test.py
 rossignol/detect.py
 rossignol/filtre.py
 rossignol/pts_arUco.py
+rossignol/record.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

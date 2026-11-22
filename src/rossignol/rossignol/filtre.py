@@ -18,6 +18,7 @@ class Filtre(Node) :
 
         super().__init__('filtre')
         self.publisher = self.create_publisher(Pose2D, 'position_filtree', 10)
+        self.pub_pos_cmd = self.create_publisher(Pose2D, 'position_commande', 10)
         self.sub_pos = self.create_subscription(Pose2D, 'position_arUco_plan', self.cb_position, 10)
         self.sub_cmd = self.create_subscription(String, 'commande_roue', self.cb_cmd, 10)
 
@@ -38,26 +39,37 @@ class Filtre(Node) :
         w = msg.data[1]
         """
 
+        # pose estimée via la caméra
         x_cam = z[0]
         y_cam = z[1]
         theta_cam = z[2]
+
+        # positions calculée via l'odométrie : (aurait pu être un noeud à part)
+        odomT = self.theta + w*delta_t
+        odomX = self.x + v*math.cos(self.theta)*delta_t
+        odomY = self.y + v*math.sin(self.theta)*delta_t
+
+        pose_msg_cmd = Pose2D()
+        pose_msg_cmd.x = odomX
+        pose_msg_cmd.y = odomY
+        pose_msg_cmd.theta = odomT
+        self.pub_pos_cmd.publish(pose_msg_cmd)
+
 
         # si l aruco n'est pas visible alors z = -1 pour toutes ses composantes
         # les données de la caméras ne seront pas prises en compte
         # sinon on calcule les nouvelles coordonées en faisant la moyenne odométrie - vision
         if (z[0] != -1 and z[1] != -1) :
-            self.theta = (self.theta + (w)*delta_t + theta_cam)/2 
-            self.x = (self.x + v*math.cos(self.theta)*delta_t + x_cam)/2
-            self.y = (self.y + v*math.sin(self.theta)*delta_t + y_cam)/2
+            self.theta = (odomT + theta_cam)/2 
+            self.x = (odomX + x_cam)/2
+            self.y = (odomY + y_cam)/2
 
         else : 
-            self.theta = self.theta + w*delta_t
-            self.x = self.x + v*math.cos(self.theta)*delta_t
-            self.y = self.y + v*math.sin(self.theta)*delta_t
+            self.theta = odomT
+            self.x = odomX
+            self.y = odomY
 
-        x_cam = z[0]
-        y_cam = z[1]
-        theta_cam = z[2]
+        
 
  
         # publication des coordonnées
@@ -78,8 +90,14 @@ class Filtre(Node) :
 
 def main():
     rclpy.init()
-    rclpy.spin(Filtre())
-    rclpy.shutdown()
+    node = Filtre()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.try_shutdown()
 
 
 if __name__ == '__main__':

@@ -239,8 +239,7 @@ def main(args=None):
     finally:
         if node is not None:
             node.destroy_node()
-        if rclpy.ok():
-            rclpy.shutdown()
+        rclpy.try_shutdown()
 
 if __name__ == '__main__':
     main()

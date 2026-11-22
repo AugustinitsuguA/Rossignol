@@ -1,0 +1,29 @@
+[0.681s] Invoking command in '/home/ahocq/Projet_rossignol/src/rossignol': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rossignol build --build-base /home/ahocq/Projet_rossignol/build/rossignol/build install --record /home/ahocq/Projet_rossignol/build/rossignol/install.log --single-version-externally-managed install_data
+[0.877s] running egg_info
+[0.889s] writing ../../build/rossignol/rossignol.egg-info/PKG-INFO
+[0.889s] writing dependency_links to ../../build/rossignol/rossignol.egg-info/dependency_links.txt
+[0.889s] writing entry points to ../../build/rossignol/rossignol.egg-info/entry_points.txt
+[0.890s] writing requirements to ../../build/rossignol/rossignol.egg-info/requires.txt
+[0.890s] writing top-level names to ../../build/rossignol/rossignol.egg-info/top_level.txt
+[0.920s] reading manifest file '../../build/rossignol/rossignol.egg-info/SOURCES.txt'
+[0.920s] writing manifest file '../../build/rossignol/rossignol.egg-info/SOURCES.txt'
+[0.921s] running build
+[0.921s] running build_py
+[0.921s] copying rossignol/record.py -> /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol
+[0.921s] running install
+[0.926s] running install_lib
+[0.940s] copying /home/ahocq/Projet_rossignol/build/rossignol/build/lib/rossignol/record.py -> /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol
+[0.941s] byte-compiling /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/record.py to record.cpython-312.pyc
+[0.942s] running install_data
+[0.942s] running install_egg_info
+[0.956s] removing '/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol-0.0.0-py3.12.egg-info' (and everything under it)
+[0.957s] Copying ../../build/rossignol/rossignol.egg-info to /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol-0.0.0-py3.12.egg-info
+[0.958s] running install_scripts
+[1.050s] Installing calibration script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.050s] Installing commande_test script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.051s] Installing detect script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.051s] Installing filtre script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.051s] Installing points_img script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.051s] Installing record script to /home/ahocq/Projet_rossignol/install/rossignol/lib/rossignol
+[1.051s] writing list of installed files to '/home/ahocq/Projet_rossignol/build/rossignol/install.log'
+[1.075s] Invoked command in '/home/ahocq/Projet_rossignol/src/rossignol' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rossignol build --build-base /home/ahocq/Projet_rossignol/build/rossignol/build install --record /home/ahocq/Projet_rossignol/build/rossignol/install.log --single-version-externally-managed install_data
