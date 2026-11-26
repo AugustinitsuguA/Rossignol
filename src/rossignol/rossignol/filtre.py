@@ -109,13 +109,13 @@ class Filtre(Node) :
                       [0 , 1 , 0],
                         [0 , 0 , 1]])
         
-        R = np.array([[0.5 , 0 , 0],
-                      [0 , 0.5 , 0],
-                        [0 , 0 , 0.5]])
+        R = np.array([[0.005 , 0 , 0],
+                      [0 , 0.005 , 0],
+                        [0 , 0 , 0.005]])
 
-        Q = np.array([[0.0001 , 0 , 0],
+        Q = np.array([[0.01 , 0 , 0],
                       [0 , 0.01 , 0],
-                        [0 , 0 , 0.0001]])
+                        [0 , 0 , 0.01]])
 
         # x(k-1)
         xkm1 = self.X[0]
@@ -154,9 +154,7 @@ class Filtre(Node) :
             K = Pm @ C.T @ np.linalg.inv(C @ Pm @ C.T + R)
 
             self.X = Xm + K @ (Y - C @ Xm)
-
             
-
             self.P = Pm - K @ C @ Pm
 
         else : 

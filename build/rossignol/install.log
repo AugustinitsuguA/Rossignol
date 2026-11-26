@@ -1,5 +1,6 @@
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/pts_arUco.py
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/calibration.py
+/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/test_moteur.py
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/record.py
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__init__.py
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/detect.py
@@ -7,6 +8,7 @@
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/commande_test.py
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__pycache__/pts_arUco.cpython-312.pyc
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__pycache__/calibration.cpython-312.pyc
+/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__pycache__/test_moteur.cpython-312.pyc
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__pycache__/record.cpython-312.pyc
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__pycache__/__init__.cpython-312.pyc
 /home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages/rossignol/__pycache__/detect.cpython-312.pyc

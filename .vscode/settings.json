@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
         "./build/rossignol"
-    ]
+    ],
+    "cmake.sourceDirectory": "/home/ahocq/Projet_rossignol/src/rossignol_cpp"
 }

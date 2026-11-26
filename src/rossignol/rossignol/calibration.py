@@ -17,7 +17,7 @@ pxx2 = 280
 
 
 # URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
-URL = "http://192.168.0.21:4747/video"
+URL = "http://172.20.10.1:4747/video"
 
 # constantes dans l'image
 global y0, K, f, K1

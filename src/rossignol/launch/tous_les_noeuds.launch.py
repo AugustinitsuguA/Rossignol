@@ -15,7 +15,7 @@ def generate_launch_description():
             output='screen',
         ),
         Node(
-            package='rossignol_cpp',
+            package='rossignol',
             executable='filtre',
             output='screen',
         ),

@@ -28,7 +28,7 @@ setup(
         'console_scripts': [
             'points_img = rossignol.pts_arUco:main',
             'detect = rossignol.detect:main',
-            'filtre = rossignol_cpp.filtre:main',
+            'filtre = rossignol.filtre:main',
             'calibration = rossignol.calibration:main',
             'commande_test = rossignol.commande_test:main',
             'record = rossignol.record:main',

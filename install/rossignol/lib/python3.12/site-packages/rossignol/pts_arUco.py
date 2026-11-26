@@ -89,7 +89,7 @@ p_calib4 = Point_im (cY-100, cX - 200)
 
 # URL de la video via DroidCam. Pour résoudre le pb de l'accès à la caméra via WSL
 # 172.20.10.1:4747
-URL = "http://192.168.0.21:4747/video"
+URL = "http://172.20.10.1:4747/video"
 # noeud ROS
 class Points_img(Node) :
     def __init__ (self) : 
@@ -119,11 +119,10 @@ class Points_img(Node) :
         self.timer = self.create_timer(timer, self.timer_callback)
 
     def timer_callback(self) :
-        global i
-        i=i+1
+        
         ret, frame = self.cap.read()
         if not ret:
-            self.get_logger().warn('Image non reçue')
+            # self.get_logger().warn('Image non reçue')
             return
         corners, ids, rejected = detector.detectMarkers(frame)
 
@@ -158,12 +157,8 @@ class Points_img(Node) :
             msg.data = "-1,-1,-1,-1,-1,-1,-1,-1"
             self.publisher.publish(msg)
 
-
-
-        if (i%5 == 0) :
-            i = 0
-            cv2.imshow("Camera", frame)
-            cv2.waitKey(1)
+        cv2.imshow("Camera", frame)
+        cv2.waitKey(1)
 
         
         
