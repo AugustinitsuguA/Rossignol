@@ -1,6 +1,0 @@
-source;share/rossignol/hook/pythonpath.ps1
-source;share/rossignol/hook/pythonpath.dsv
-source;share/rossignol/hook/pythonpath.sh
-source;share/rossignol/hook/ament_prefix_path.ps1
-source;share/rossignol/hook/ament_prefix_path.dsv
-source;share/rossignol/hook/ament_prefix_path.sh
