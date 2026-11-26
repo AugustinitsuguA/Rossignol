@@ -1,0 +1,32 @@
+[0.705s] Invoking command in '/home/ahocq/Projet_rossignol/src/rossignol': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/src/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/rossignol build --build-base /home/ahocq/Projet_rossignol/src/build/rossignol/build install --record /home/ahocq/Projet_rossignol/src/build/rossignol/install.log --single-version-externally-managed install_data
+[0.898s] running egg_info
+[0.910s] writing ../build/rossignol/rossignol.egg-info/PKG-INFO
+[0.911s] writing dependency_links to ../build/rossignol/rossignol.egg-info/dependency_links.txt
+[0.911s] writing entry points to ../build/rossignol/rossignol.egg-info/entry_points.txt
+[0.911s] writing requirements to ../build/rossignol/rossignol.egg-info/requires.txt
+[0.911s] writing top-level names to ../build/rossignol/rossignol.egg-info/top_level.txt
+[0.941s] reading manifest file '../build/rossignol/rossignol.egg-info/SOURCES.txt'
+[0.941s] writing manifest file '../build/rossignol/rossignol.egg-info/SOURCES.txt'
+[0.942s] running build
+[0.942s] running build_py
+[0.942s] copying rossignol/filtre.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol
+[0.942s] copying rossignol/commande_test.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol
+[0.942s] running install
+[0.946s] running install_lib
+[0.959s] copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/filtre.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol
+[0.959s] copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/commande_test.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol
+[0.959s] byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/filtre.py to filtre.cpython-312.pyc
+[0.960s] byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/commande_test.py to commande_test.cpython-312.pyc
+[0.960s] running install_data
+[0.961s] running install_egg_info
+[0.974s] removing '/home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol-0.0.0-py3.12.egg-info' (and everything under it)
+[0.974s] Copying ../build/rossignol/rossignol.egg-info to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol-0.0.0-py3.12.egg-info
+[0.975s] running install_scripts
+[1.064s] Installing calibration script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol
+[1.064s] Installing commande_test script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol
+[1.064s] Installing detect script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol
+[1.065s] Installing filtre script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol
+[1.065s] Installing points_img script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol
+[1.065s] Installing record script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol
+[1.066s] writing list of installed files to '/home/ahocq/Projet_rossignol/src/build/rossignol/install.log'
+[1.088s] Invoked command in '/home/ahocq/Projet_rossignol/src/rossignol' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahocq/Projet_rossignol/src/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/rossignol build --build-base /home/ahocq/Projet_rossignol/src/build/rossignol/build install --record /home/ahocq/Projet_rossignol/src/build/rossignol/install.log --single-version-externally-managed install_data

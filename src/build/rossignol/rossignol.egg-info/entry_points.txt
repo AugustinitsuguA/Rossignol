@@ -1,0 +1,7 @@
+[console_scripts]
+calibration = rossignol.calibration:main
+commande_test = rossignol.commande_test:main
+detect = rossignol.detect:main
+filtre = rossignol.filtre:main
+points_img = rossignol.pts_arUco:main
+record = rossignol.record:main
