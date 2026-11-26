@@ -7,6 +7,12 @@ global x_aruco, y_aruco, theta_aruco, x_cmd, y_cmd, theta_cmd, x_filtre, y_filtr
 x_aruco = -1
 y_aruco = -1
 theta_aruco = -1
+x_cmd = -1
+y_cmd = -1
+theta_cmd = -1
+x_filtre = -1
+y_filtre = -1
+theta_filtre = -1
 
 # noeud ROS
 class Record(Node) :
