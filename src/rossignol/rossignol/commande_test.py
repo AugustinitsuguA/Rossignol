@@ -12,11 +12,11 @@ class Commande_test (Node) :
 
     def timer_callback(self) :
         msg = String()
-        msg.data = "0.01,0.01"
+        msg.data = "0.2,0.5"
         self.publisher.publish(msg)
 
     def calib_cb(self, msg) :
-        self.timer = self.create_timer(0.05, self.timer_callback)
+        self.timer = self.create_timer(0.01, self.timer_callback)
 
 
 def main():

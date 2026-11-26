@@ -1,0 +1,4 @@
+source;share/rossignol_cpp/local_setup.bash
+source;share/rossignol_cpp/local_setup.dsv
+source;share/rossignol_cpp/local_setup.sh
+source;share/rossignol_cpp/local_setup.zsh

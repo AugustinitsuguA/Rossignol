@@ -1,0 +1,15 @@
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/ament_index/resource_index/package_run_dependencies/rossignol_cpp
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/ament_index/resource_index/parent_prefix_path/rossignol_cpp
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/ament_prefix_path.sh
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/ament_prefix_path.dsv
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/path.sh
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/path.dsv
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.bash
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.sh
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.zsh
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.dsv
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/package.dsv
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/ament_index/resource_index/packages/rossignol_cpp
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/cmake/rossignol_cppConfig.cmake
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/cmake/rossignol_cppConfig-version.cmake
+/home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/package.xml

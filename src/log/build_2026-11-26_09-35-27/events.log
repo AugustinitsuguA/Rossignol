@@ -1,0 +1,339 @@
+[0.000000] (-) TimerEvent: {}
+[0.000573] (rossignol_cpp) JobQueued: {'identifier': 'rossignol_cpp', 'dependencies': OrderedDict()}
+[0.000646] (rossignol) JobQueued: {'identifier': 'rossignol', 'dependencies': OrderedDict({'rossignol_cpp': '/home/ahocq/Projet_rossignol/src/install/rossignol_cpp'})}
+[0.001160] (rossignol_cpp) JobStarted: {'identifier': 'rossignol_cpp'}
+[0.012184] (rossignol_cpp) JobProgress: {'identifier': 'rossignol_cpp', 'progress': 'cmake'}
+[0.013849] (rossignol_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/ahocq/Projet_rossignol/src/rossignol_cpp', '-DCMAKE_INSTALL_PREFIX=/home/ahocq/Projet_rossignol/src/install/rossignol_cpp'], 'cwd': '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ahocq', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ahocq', 'OLDPWD': '/home/ahocq/Projet_rossignol', 'TERM_PROGRAM_VERSION': '1.147.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-f203a664-1ea6-45d8-8860-78a3f570fe85.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ahocq/Projet_rossignol/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ahocq', 'NAME': 'augustin', 'WSL_INTEROP': '/run/WSL/479_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/scripts/noConfigScripts:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/remote-cli:/home/ahocq/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/MATLAB/R2024b/bin/win64:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/ahocq/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/National Instruments/Shared/LabVIEW CLI:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/snap/bin:/home/ahocq/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/copilot-shim', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-28c7b89859e129bd.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/ahocq/.vscode-server/data/User/workspaceStorage/3dc6277d11f23552e5e0d5b6cef9d7cc/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-6b2cea471c.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ahocq/Projet_rossignol/install/rossignol:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp', 'COPILOT_DEBUG_NONCE': 'da595ea93216780eb56546cb1e9f0824', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ahocq/Projet_rossignol/install/rossignol:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[0.099647] (-) TimerEvent: {}
+[0.200069] (-) TimerEvent: {}
+[0.300486] (-) TimerEvent: {}
+[0.401107] (-) TimerEvent: {}
+[0.501628] (-) TimerEvent: {}
+[0.602294] (-) TimerEvent: {}
+[0.702829] (-) TimerEvent: {}
+[0.803222] (-) TimerEvent: {}
+[0.903615] (-) TimerEvent: {}
+[1.004264] (-) TimerEvent: {}
+[1.026359] (rossignol_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.104643] (-) TimerEvent: {}
+[1.205245] (-) TimerEvent: {}
+[1.305920] (-) TimerEvent: {}
+[1.406571] (-) TimerEvent: {}
+[1.507241] (-) TimerEvent: {}
+[1.608029] (-) TimerEvent: {}
+[1.708829] (-) TimerEvent: {}
+[1.809562] (-) TimerEvent: {}
+[1.910526] (-) TimerEvent: {}
+[2.011235] (-) TimerEvent: {}
+[2.111843] (-) TimerEvent: {}
+[2.212380] (-) TimerEvent: {}
+[2.312897] (-) TimerEvent: {}
+[2.413377] (-) TimerEvent: {}
+[2.514113] (-) TimerEvent: {}
+[2.614718] (-) TimerEvent: {}
+[2.715234] (-) TimerEvent: {}
+[2.815986] (-) TimerEvent: {}
+[2.916600] (-) TimerEvent: {}
+[3.017136] (-) TimerEvent: {}
+[3.117624] (-) TimerEvent: {}
+[3.218074] (-) TimerEvent: {}
+[3.318731] (-) TimerEvent: {}
+[3.419370] (-) TimerEvent: {}
+[3.520122] (-) TimerEvent: {}
+[3.620676] (-) TimerEvent: {}
+[3.721118] (-) TimerEvent: {}
+[3.821700] (-) TimerEvent: {}
+[3.922258] (-) TimerEvent: {}
+[4.022879] (-) TimerEvent: {}
+[4.123470] (-) TimerEvent: {}
+[4.224333] (-) TimerEvent: {}
+[4.324975] (-) TimerEvent: {}
+[4.425500] (-) TimerEvent: {}
+[4.526192] (-) TimerEvent: {}
+[4.626730] (-) TimerEvent: {}
+[4.727301] (-) TimerEvent: {}
+[4.827845] (-) TimerEvent: {}
+[4.928412] (-) TimerEvent: {}
+[5.029110] (-) TimerEvent: {}
+[5.129814] (-) TimerEvent: {}
+[5.204368] (rossignol_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[5.230137] (-) TimerEvent: {}
+[5.330766] (-) TimerEvent: {}
+[5.431468] (-) TimerEvent: {}
+[5.532201] (-) TimerEvent: {}
+[5.632766] (-) TimerEvent: {}
+[5.733370] (-) TimerEvent: {}
+[5.833966] (-) TimerEvent: {}
+[5.934806] (-) TimerEvent: {}
+[6.035489] (-) TimerEvent: {}
+[6.136089] (-) TimerEvent: {}
+[6.236616] (-) TimerEvent: {}
+[6.337128] (-) TimerEvent: {}
+[6.437932] (-) TimerEvent: {}
+[6.538619] (-) TimerEvent: {}
+[6.639277] (-) TimerEvent: {}
+[6.740070] (-) TimerEvent: {}
+[6.840624] (-) TimerEvent: {}
+[6.941230] (-) TimerEvent: {}
+[7.041956] (-) TimerEvent: {}
+[7.142634] (-) TimerEvent: {}
+[7.243336] (-) TimerEvent: {}
+[7.344176] (-) TimerEvent: {}
+[7.444800] (-) TimerEvent: {}
+[7.545448] (-) TimerEvent: {}
+[7.645960] (-) TimerEvent: {}
+[7.746442] (-) TimerEvent: {}
+[7.846903] (-) TimerEvent: {}
+[7.947366] (-) TimerEvent: {}
+[8.047966] (-) TimerEvent: {}
+[8.148606] (-) TimerEvent: {}
+[8.249219] (-) TimerEvent: {}
+[8.349802] (-) TimerEvent: {}
+[8.450401] (-) TimerEvent: {}
+[8.550945] (-) TimerEvent: {}
+[8.651437] (-) TimerEvent: {}
+[8.752168] (-) TimerEvent: {}
+[8.852749] (-) TimerEvent: {}
+[8.953170] (-) TimerEvent: {}
+[9.053720] (-) TimerEvent: {}
+[9.154356] (-) TimerEvent: {}
+[9.255010] (-) TimerEvent: {}
+[9.312693] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[9.355228] (-) TimerEvent: {}
+[9.455735] (-) TimerEvent: {}
+[9.556404] (-) TimerEvent: {}
+[9.656994] (-) TimerEvent: {}
+[9.757587] (-) TimerEvent: {}
+[9.858165] (-) TimerEvent: {}
+[9.958714] (-) TimerEvent: {}
+[10.059217] (-) TimerEvent: {}
+[10.159879] (-) TimerEvent: {}
+[10.260645] (-) TimerEvent: {}
+[10.361261] (-) TimerEvent: {}
+[10.461862] (-) TimerEvent: {}
+[10.562325] (-) TimerEvent: {}
+[10.662746] (-) TimerEvent: {}
+[10.763262] (-) TimerEvent: {}
+[10.859802] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[10.863486] (-) TimerEvent: {}
+[10.874830] (rossignol_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[10.875972] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[10.877591] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[10.963887] (-) TimerEvent: {}
+[11.064689] (-) TimerEvent: {}
+[11.165172] (-) TimerEvent: {}
+[11.265702] (-) TimerEvent: {}
+[11.366127] (-) TimerEvent: {}
+[11.466597] (-) TimerEvent: {}
+[11.567347] (-) TimerEvent: {}
+[11.667873] (-) TimerEvent: {}
+[11.741345] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[11.768187] (-) TimerEvent: {}
+[11.868986] (-) TimerEvent: {}
+[11.969672] (-) TimerEvent: {}
+[12.070186] (-) TimerEvent: {}
+[12.170771] (-) TimerEvent: {}
+[12.271303] (-) TimerEvent: {}
+[12.371909] (-) TimerEvent: {}
+[12.472606] (-) TimerEvent: {}
+[12.573263] (-) TimerEvent: {}
+[12.673729] (-) TimerEvent: {}
+[12.774495] (-) TimerEvent: {}
+[12.875031] (-) TimerEvent: {}
+[12.975687] (-) TimerEvent: {}
+[13.076235] (-) TimerEvent: {}
+[13.176791] (-) TimerEvent: {}
+[13.277380] (-) TimerEvent: {}
+[13.378250] (-) TimerEvent: {}
+[13.478820] (-) TimerEvent: {}
+[13.542023] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[13.552567] (rossignol_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[13.553070] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[13.553719] (rossignol_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[13.579086] (-) TimerEvent: {}
+[13.664991] (rossignol_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[13.679297] (-) TimerEvent: {}
+[13.779808] (-) TimerEvent: {}
+[13.880372] (-) TimerEvent: {}
+[13.886389] (rossignol_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[13.980639] (-) TimerEvent: {}
+[14.081156] (-) TimerEvent: {}
+[14.141657] (rossignol_cpp) StdoutLine: {'line': b'-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[14.181420] (-) TimerEvent: {}
+[14.281835] (-) TimerEvent: {}
+[14.382484] (-) TimerEvent: {}
+[14.483049] (-) TimerEvent: {}
+[14.583633] (-) TimerEvent: {}
+[14.684063] (-) TimerEvent: {}
+[14.784580] (-) TimerEvent: {}
+[14.856260] (rossignol_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[14.884882] (-) TimerEvent: {}
+[14.888030] (rossignol_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[14.940088] (rossignol_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[14.983553] (rossignol_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[14.984992] (-) TimerEvent: {}
+[15.085331] (-) TimerEvent: {}
+[15.167100] (rossignol_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[15.176820] (rossignol_cpp) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[15.185540] (-) TimerEvent: {}
+[15.285953] (-) TimerEvent: {}
+[15.354603] (rossignol_cpp) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[15.386152] (-) TimerEvent: {}
+[15.486673] (-) TimerEvent: {}
+[15.587306] (-) TimerEvent: {}
+[15.687873] (-) TimerEvent: {}
+[15.788427] (-) TimerEvent: {}
+[15.888884] (-) TimerEvent: {}
+[15.989425] (-) TimerEvent: {}
+[16.089957] (-) TimerEvent: {}
+[16.190683] (-) TimerEvent: {}
+[16.291260] (-) TimerEvent: {}
+[16.391891] (-) TimerEvent: {}
+[16.492483] (-) TimerEvent: {}
+[16.511437] (rossignol_cpp) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[16.592698] (-) TimerEvent: {}
+[16.693388] (-) TimerEvent: {}
+[16.793954] (-) TimerEvent: {}
+[16.894469] (-) TimerEvent: {}
+[16.995203] (-) TimerEvent: {}
+[17.095742] (-) TimerEvent: {}
+[17.196360] (-) TimerEvent: {}
+[17.206681] (rossignol_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[17.296678] (-) TimerEvent: {}
+[17.397247] (-) TimerEvent: {}
+[17.497915] (-) TimerEvent: {}
+[17.598561] (-) TimerEvent: {}
+[17.699218] (-) TimerEvent: {}
+[17.799838] (-) TimerEvent: {}
+[17.900463] (-) TimerEvent: {}
+[18.001027] (-) TimerEvent: {}
+[18.101721] (-) TimerEvent: {}
+[18.202318] (-) TimerEvent: {}
+[18.264101] (rossignol_cpp) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[18.302499] (-) TimerEvent: {}
+[18.310711] (rossignol_cpp) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[18.349508] (rossignol_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[18.402721] (-) TimerEvent: {}
+[18.503412] (-) TimerEvent: {}
+[18.565274] (rossignol_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[18.565903] (rossignol_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[18.566033] (rossignol_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[18.569512] (rossignol_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[18.573582] (rossignol_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[18.573819] (rossignol_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[18.576104] (rossignol_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[18.580872] (rossignol_cpp) StdoutLine: {'line': b'-- Configuring done (18.5s)\n'}
+[18.592014] (rossignol_cpp) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[18.598267] (rossignol_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/ahocq/Projet_rossignol/src/build/rossignol_cpp\n'}
+[18.603813] (-) TimerEvent: {}
+[18.615711] (rossignol_cpp) CommandEnded: {'returncode': 0}
+[18.618916] (rossignol_cpp) JobProgress: {'identifier': 'rossignol_cpp', 'progress': 'build'}
+[18.619014] (rossignol_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp', '--', '-j16', '-l16'], 'cwd': '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ahocq', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ahocq', 'OLDPWD': '/home/ahocq/Projet_rossignol', 'TERM_PROGRAM_VERSION': '1.147.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-f203a664-1ea6-45d8-8860-78a3f570fe85.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ahocq/Projet_rossignol/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ahocq', 'NAME': 'augustin', 'WSL_INTEROP': '/run/WSL/479_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/scripts/noConfigScripts:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/remote-cli:/home/ahocq/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/MATLAB/R2024b/bin/win64:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/ahocq/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/National Instruments/Shared/LabVIEW CLI:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/snap/bin:/home/ahocq/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/copilot-shim', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-28c7b89859e129bd.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/ahocq/.vscode-server/data/User/workspaceStorage/3dc6277d11f23552e5e0d5b6cef9d7cc/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-6b2cea471c.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ahocq/Projet_rossignol/install/rossignol:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp', 'COPILOT_DEBUG_NONCE': 'da595ea93216780eb56546cb1e9f0824', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ahocq/Projet_rossignol/install/rossignol:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[18.679230] (rossignol_cpp) CommandEnded: {'returncode': 0}
+[18.680309] (rossignol_cpp) JobProgress: {'identifier': 'rossignol_cpp', 'progress': 'install'}
+[18.691296] (rossignol_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp'], 'cwd': '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ahocq', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ahocq', 'OLDPWD': '/home/ahocq/Projet_rossignol', 'TERM_PROGRAM_VERSION': '1.147.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-f203a664-1ea6-45d8-8860-78a3f570fe85.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ahocq/Projet_rossignol/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ahocq', 'NAME': 'augustin', 'WSL_INTEROP': '/run/WSL/479_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/scripts/noConfigScripts:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/remote-cli:/home/ahocq/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/MATLAB/R2024b/bin/win64:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/ahocq/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/National Instruments/Shared/LabVIEW CLI:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/snap/bin:/home/ahocq/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/copilot-shim', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-28c7b89859e129bd.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/ahocq/.vscode-server/data/User/workspaceStorage/3dc6277d11f23552e5e0d5b6cef9d7cc/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-6b2cea471c.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ahocq/Projet_rossignol/install/rossignol:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ahocq/Projet_rossignol/src/build/rossignol_cpp', 'COPILOT_DEBUG_NONCE': 'da595ea93216780eb56546cb1e9f0824', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ahocq/Projet_rossignol/install/rossignol:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[18.701053] (rossignol_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.702048] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/ament_index/resource_index/package_run_dependencies/rossignol_cpp\n'}
+[18.702479] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/ament_index/resource_index/parent_prefix_path/rossignol_cpp\n'}
+[18.702867] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/ament_prefix_path.sh\n'}
+[18.703164] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/ament_prefix_path.dsv\n'}
+[18.703555] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/path.sh\n'}
+[18.703774] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/environment/path.dsv\n'}
+[18.703856] (-) TimerEvent: {}
+[18.703995] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.bash\n'}
+[18.704236] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.sh\n'}
+[18.704625] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.zsh\n'}
+[18.704744] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/local_setup.dsv\n'}
+[18.704870] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/package.dsv\n'}
+[18.705071] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/ament_index/resource_index/packages/rossignol_cpp\n'}
+[18.705139] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/cmake/rossignol_cppConfig.cmake\n'}
+[18.705422] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/cmake/rossignol_cppConfig-version.cmake\n'}
+[18.705592] (rossignol_cpp) StdoutLine: {'line': b'-- Installing: /home/ahocq/Projet_rossignol/src/install/rossignol_cpp/share/rossignol_cpp/package.xml\n'}
+[18.707904] (rossignol_cpp) CommandEnded: {'returncode': 0}
+[18.730290] (rossignol_cpp) JobEnded: {'identifier': 'rossignol_cpp', 'rc': 0}
+[18.731147] (rossignol) JobStarted: {'identifier': 'rossignol'}
+[18.804105] (-) TimerEvent: {}
+[18.904678] (-) TimerEvent: {}
+[19.005220] (-) TimerEvent: {}
+[19.105895] (-) TimerEvent: {}
+[19.206307] (-) TimerEvent: {}
+[19.306863] (-) TimerEvent: {}
+[19.407662] (-) TimerEvent: {}
+[19.508164] (-) TimerEvent: {}
+[19.608608] (-) TimerEvent: {}
+[19.709138] (-) TimerEvent: {}
+[19.809631] (-) TimerEvent: {}
+[19.910110] (-) TimerEvent: {}
+[20.010676] (-) TimerEvent: {}
+[20.111240] (-) TimerEvent: {}
+[20.211662] (-) TimerEvent: {}
+[20.312026] (-) TimerEvent: {}
+[20.412453] (-) TimerEvent: {}
+[20.513273] (-) TimerEvent: {}
+[20.601077] (rossignol) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/rossignol', 'build', '--build-base', '/home/ahocq/Projet_rossignol/src/build/rossignol/build', 'install', '--record', '/home/ahocq/Projet_rossignol/src/build/rossignol/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ahocq/Projet_rossignol/src/rossignol', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ahocq', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ahocq', 'OLDPWD': '/home/ahocq/Projet_rossignol', 'TERM_PROGRAM_VERSION': '1.147.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-f203a664-1ea6-45d8-8860-78a3f570fe85.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ahocq/Projet_rossignol/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ahocq', 'NAME': 'augustin', 'WSL_INTEROP': '/run/WSL/479_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/bundled/scripts/noConfigScripts:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/remote-cli:/home/ahocq/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/MATLAB/R2024b/bin/win64:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/ahocq/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/National Instruments/Shared/LabVIEW CLI:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/ahocq/miniconda31:/mnt/c/Users/ahocq/miniconda31/Library/mingw-w64/bin:/mnt/c/Users/ahocq/miniconda31/Library/usr/bin:/mnt/c/Users/ahocq/miniconda31/Library/bin:/mnt/c/Users/ahocq/miniconda31/Scripts:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python314/python.exe:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python310/:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/ahocq/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/:/mnt/c/Users/ahocq/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ahocq/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ahocq/AppData/Local/Programs/DockerDesktop/resources/bin:/snap/bin:/home/ahocq/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ahocq/.vscode-server/bin/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/bin/copilot-shim', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ahocq/.vscode-server/extensions/ms-python.debugpy-2026.7.13291004-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-28c7b89859e129bd.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/ahocq/.vscode-server/data/User/workspaceStorage/3dc6277d11f23552e5e0d5b6cef9d7cc/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-6b2cea471c.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ahocq/Projet_rossignol/src/install/rossignol_cpp:/home/ahocq/Projet_rossignol/install/rossignol:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ahocq/Projet_rossignol/src/build/rossignol', 'COPILOT_DEBUG_NONCE': 'da595ea93216780eb56546cb1e9f0824', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ahocq/Projet_rossignol/src/build/rossignol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages:/home/ahocq/Projet_rossignol/install/rossignol/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ahocq/Projet_rossignol/src/install/rossignol_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}, 'shell': False}
+[20.613417] (-) TimerEvent: {}
+[20.713861] (-) TimerEvent: {}
+[20.814417] (-) TimerEvent: {}
+[20.914899] (-) TimerEvent: {}
+[20.922659] (rossignol) StdoutLine: {'line': b'running egg_info\n'}
+[20.923192] (rossignol) StdoutLine: {'line': b'creating ../build/rossignol/rossignol.egg-info\n'}
+[20.943526] (rossignol) StdoutLine: {'line': b'writing ../build/rossignol/rossignol.egg-info/PKG-INFO\n'}
+[20.943943] (rossignol) StdoutLine: {'line': b'writing dependency_links to ../build/rossignol/rossignol.egg-info/dependency_links.txt\n'}
+[20.944492] (rossignol) StdoutLine: {'line': b'writing entry points to ../build/rossignol/rossignol.egg-info/entry_points.txt\n'}
+[20.944987] (rossignol) StdoutLine: {'line': b'writing requirements to ../build/rossignol/rossignol.egg-info/requires.txt\n'}
+[20.945088] (rossignol) StdoutLine: {'line': b'writing top-level names to ../build/rossignol/rossignol.egg-info/top_level.txt\n'}
+[20.945203] (rossignol) StdoutLine: {'line': b"writing manifest file '../build/rossignol/rossignol.egg-info/SOURCES.txt'\n"}
+[20.987717] (rossignol) StdoutLine: {'line': b"reading manifest file '../build/rossignol/rossignol.egg-info/SOURCES.txt'\n"}
+[20.988279] (rossignol) StdoutLine: {'line': b"writing manifest file '../build/rossignol/rossignol.egg-info/SOURCES.txt'\n"}
+[20.988642] (rossignol) StdoutLine: {'line': b'running build\n'}
+[20.988703] (rossignol) StdoutLine: {'line': b'running build_py\n'}
+[20.988748] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/build/rossignol/build\n'}
+[20.988915] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib\n'}
+[20.989097] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.989548] (rossignol) StdoutLine: {'line': b'copying rossignol/pts_arUco.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.990087] (rossignol) StdoutLine: {'line': b'copying rossignol/calibration.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.990194] (rossignol) StdoutLine: {'line': b'copying rossignol/record.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.990458] (rossignol) StdoutLine: {'line': b'copying rossignol/__init__.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.990545] (rossignol) StdoutLine: {'line': b'copying rossignol/detect.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.990592] (rossignol) StdoutLine: {'line': b'copying rossignol/filtre.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.990635] (rossignol) StdoutLine: {'line': b'copying rossignol/commande_test.py -> /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol\n'}
+[20.990677] (rossignol) StdoutLine: {'line': b'running install\n'}
+[20.995812] (rossignol) StdoutLine: {'line': b'running install_lib\n'}
+[21.010196] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.010509] (rossignol) StdoutLine: {'line': b'copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/pts_arUco.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.010784] (rossignol) StdoutLine: {'line': b'copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/calibration.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.011103] (rossignol) StdoutLine: {'line': b'copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/record.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.011206] (rossignol) StdoutLine: {'line': b'copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/__init__.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.011265] (rossignol) StdoutLine: {'line': b'copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/detect.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.011311] (rossignol) StdoutLine: {'line': b'copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/filtre.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.011353] (rossignol) StdoutLine: {'line': b'copying /home/ahocq/Projet_rossignol/src/build/rossignol/build/lib/rossignol/commande_test.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol\n'}
+[21.011661] (rossignol) StdoutLine: {'line': b'byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/pts_arUco.py to pts_arUco.cpython-312.pyc\n'}
+[21.013869] (rossignol) StdoutLine: {'line': b'byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/calibration.py to calibration.cpython-312.pyc\n'}
+[21.015065] (-) TimerEvent: {}
+[21.015937] (rossignol) StdoutLine: {'line': b'byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/record.py to record.cpython-312.pyc\n'}
+[21.016625] (rossignol) StdoutLine: {'line': b'byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/__init__.py to __init__.cpython-312.pyc\n'}
+[21.016882] (rossignol) StdoutLine: {'line': b'byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/detect.py to detect.cpython-312.pyc\n'}
+[21.017816] (rossignol) StdoutLine: {'line': b'byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/filtre.py to filtre.cpython-312.pyc\n'}
+[21.018469] (rossignol) StdoutLine: {'line': b'byte-compiling /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol/commande_test.py to commande_test.cpython-312.pyc\n'}
+[21.018926] (rossignol) StdoutLine: {'line': b'running install_data\n'}
+[21.019238] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/install/rossignol/share/ament_index\n'}
+[21.019498] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/install/rossignol/share/ament_index/resource_index\n'}
+[21.019570] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/install/rossignol/share/ament_index/resource_index/packages\n'}
+[21.019617] (rossignol) StdoutLine: {'line': b'copying resource/rossignol -> /home/ahocq/Projet_rossignol/src/install/rossignol/share/ament_index/resource_index/packages\n'}
+[21.020252] (rossignol) StdoutLine: {'line': b'copying package.xml -> /home/ahocq/Projet_rossignol/src/install/rossignol/share/rossignol\n'}
+[21.020670] (rossignol) StdoutLine: {'line': b'creating /home/ahocq/Projet_rossignol/src/install/rossignol/share/rossignol/launch\n'}
+[21.020819] (rossignol) StdoutLine: {'line': b'copying launch/tous_les_noeuds.launch.py -> /home/ahocq/Projet_rossignol/src/install/rossignol/share/rossignol/launch\n'}
+[21.020879] (rossignol) StdoutLine: {'line': b'running install_egg_info\n'}
+[21.039778] (rossignol) StdoutLine: {'line': b'Copying ../build/rossignol/rossignol.egg-info to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/python3.12/site-packages/rossignol-0.0.0-py3.12.egg-info\n'}
+[21.040644] (rossignol) StdoutLine: {'line': b'running install_scripts\n'}
+[21.115184] (-) TimerEvent: {}
+[21.141780] (rossignol) StdoutLine: {'line': b'Installing calibration script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol\n'}
+[21.142363] (rossignol) StdoutLine: {'line': b'Installing commande_test script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol\n'}
+[21.142629] (rossignol) StdoutLine: {'line': b'Installing detect script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol\n'}
+[21.142943] (rossignol) StdoutLine: {'line': b'Installing filtre script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol\n'}
+[21.143191] (rossignol) StdoutLine: {'line': b'Installing points_img script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol\n'}
+[21.143329] (rossignol) StdoutLine: {'line': b'Installing record script to /home/ahocq/Projet_rossignol/src/install/rossignol/lib/rossignol\n'}
+[21.143650] (rossignol) StdoutLine: {'line': b"writing list of installed files to '/home/ahocq/Projet_rossignol/src/build/rossignol/install.log'\n"}
+[21.169627] (rossignol) CommandEnded: {'returncode': 0}
+[21.176214] (rossignol) JobEnded: {'identifier': 'rossignol', 'rc': 0}
+[21.177504] (-) EventReactorShutdown: {}
